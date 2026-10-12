@@ -1,13 +1,11 @@
 #include "components/servo.h"
 
 #include <driver/ledc.h>
-#include <freertos/FreeRTOS.h>
 
 #define SERVO_PIN 18
 
 
 
-static void reset_servo(ledc_timer_config_t timer_config, ledc_channel_config_t led_channel);
 void servo_move(ledc_timer_config_t timer_config, ledc_channel_config_t led_channel);
 static int angle_to_duty(int angle);
 
@@ -61,10 +59,9 @@ void servo_move(ledc_timer_config_t timer_config, ledc_channel_config_t led_chan
     }
     
 }
-static void reset_servo(ledc_timer_config_t timer_config, ledc_channel_config_t led_channel){
-    ledc_set_duty(led_channel.speed_mode, led_channel.channel, 0);
-    ledc_update_duty(led_channel.speed_mode, led_channel.channel);
-}
+
+
+
 
 static int angle_to_duty(int angle) {
     int pulse_width = 500 + (angle * 2000 / 180); // Convert angle to pulse width (500-2500us)
