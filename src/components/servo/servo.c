@@ -1,5 +1,5 @@
 #include "components/servo/servo.h"
-#include "components/servo/servoMaths.h"
+#include "servoMaths.h"
 
 #include <driver/ledc.h>
 

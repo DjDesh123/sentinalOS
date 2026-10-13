@@ -2,9 +2,11 @@
 #define SERVO_H
 
 
+#include <freertos/FreeRTOS.h>
+
 void servo_init();
 
-#include <freertos/FreeRTOS.h>
+
 
 
 #endif // SERVO_H
