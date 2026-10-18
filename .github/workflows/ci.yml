@@ -17,3 +17,5 @@ jobs:
           pip install platformio
       - name: Build Project
         run: pio run -e upesy_wroom
+      - name: Run Tests
+        run: pio test -e upesy_wroom
