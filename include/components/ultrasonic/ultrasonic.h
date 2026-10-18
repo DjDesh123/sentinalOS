@@ -9,7 +9,7 @@
 #include <freertos/task.h>
 #include "hal/gpio_types.h"
 
-bool ultrasonic_init();
+void ultrasonic_init();
 bool detect_obstacle();
 
 

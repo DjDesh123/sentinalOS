@@ -1,5 +1,5 @@
-#include <unity.h>
 #include "servoMaths.h"
+#include "include/servoTest.h"
 
 
 void angle_to_duty_test(void) {
@@ -7,10 +7,4 @@ void angle_to_duty_test(void) {
     TEST_ASSERT_EQUAL(25, angle_to_duty(0));
     TEST_ASSERT_EQUAL(76, angle_to_duty(90));
     TEST_ASSERT_EQUAL(127, angle_to_duty(180));
-}
-
-void app_main(void) {
-    UNITY_BEGIN();
-    RUN_TEST(angle_to_duty_test);
-    UNITY_END();
 }
